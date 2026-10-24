@@ -1,0 +1,12 @@
+# Préproduction : pas d'indexation (chaque page porte aussi <meta name="robots" content="noindex">).
+User-agent: facebookexternalhit
+User-agent: LinkedInBot
+User-agent: Twitterbot
+User-agent: Slackbot-LinkExpanding
+User-agent: WhatsApp
+User-agent: TelegramBot
+User-agent: Discordbot
+Allow: /
+
+User-agent: *
+Disallow: /

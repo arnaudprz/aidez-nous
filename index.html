@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr" class>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- Google Tag Manager (conteneur de Greatly, src/data/site.js) -->
+<script>(function(){const GTM_ID = "GTM-M9G59C2C";
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer',GTM_ID);})();</script>
+<!-- grands écrans (≥ 1200 px) : --z = largeur / 1440. L'accueil (echelle) s'agrandit tout entier ; les autres pages n'agrandissent
+     que leur en-tête et leur pied (--echelle), pour qu'ils aient partout la taille de ceux de l'accueil.
+     --z (accueil seulement) corrige les unités d'écran quand le navigateur les zoome (outils/postcss/dezoome.mjs) -->
+<script>(function(){const echelle = false;
+(function(){var R=document.documentElement;
+/* Les navigateurs n'appliquent pas tous le zoom de la même façon : Chrome agrandit aussi les unités d'écran (vh, vw), certaines versions
+   de Safari non. Une seule fois, au chargement, un élément test zoomé ×2 mesure ce que fait celui-ci :
+   - mesures : getBoundingClientRect rend-il les tailles zoomées ? (window.greatlyMesure en tient compte, pour les scripts)
+   - unites  : 100vh est-il agrandi ? (alors --z divise les unités d'écran, outils/postcss/dezoome.mjs ; sinon --z reste 1) */
+var e=document.createElement("div"),c=document.createElement("div");e.style.cssText="position:absolute;visibility:hidden;pointer-events:none;top:0;left:0;zoom:2";
+c.style.cssText="width:100px;height:100vh";e.appendChild(c);R.appendChild(e);var r=c.getBoundingClientRect(),mesures=r.width>150,unites=r.height>innerHeight*1.5;R.removeChild(e);
+function z(){var k=innerWidth>=1200?innerWidth/1440:1;R.style.setProperty("--echelle",k);window.greatlyMesure=mesures?k:1;
+if(echelle){R.style.zoom=k===1?"":k;R.style.setProperty("--z",unites?k:1);}}
+z();addEventListener("resize",z);})();})();</script>
+<!-- téléphone (< 900 px) ou ordinateur -->
+<script>(function(){var R=document.documentElement;function c(){var t=innerWidth<900;R.classList.toggle("v58m",t);R.classList.toggle("fil-large",!t);}c();addEventListener("resize",c);})();</script>
+<meta name="theme-color" content="#FF6B61">
+<meta name="robots" content="noindex, nofollow">
+
+<title>Teste · Greatly</title>
+<meta name="description" content="Toutes les versions de la page d’accueil de Greatly : parcourez-les, notez-les de 1 à 5 et donnez votre avis.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Greatly">
+<meta property="og:title" content="Aidez-nous à choisir la DA de Greatly.">
+<meta property="og:description" content="Toutes les versions de la page d’accueil de Greatly : parcourez-les, notez-les de 1 à 5 et donnez votre avis.">
+<meta property="og:url" content="https://aidez-nous.greatly.club/">
+<meta property="og:image" content="https://aidez-nous.greatly.club/partage/teste.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Aidez-nous à choisir la DA de Greatly : les versions numérotées et un écran d’ordinateur qui montre l’affiche Gigotez, Phosphorez, Vibrez.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Aidez-nous à choisir la DA de Greatly.">
+<meta name="twitter:description" content="Toutes les versions de la page d’accueil de Greatly : parcourez-les, notez-les de 1 à 5 et donnez votre avis.">
+<meta name="twitter:image" content="https://aidez-nous.greatly.club/partage/teste.jpg">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/polices/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/polices/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://greatly.club/#organisation","name":"Greatly","url":"https://greatly.club/","logo":"https://greatly.club/apple-touch-icon.png","description":"Société à mission qui accompagne dirigeants, cadres, indépendants et équipes : énergie, confiance en soi et confiance envers les autres, pour agir avec justesse.","slogan":"Votre réussite s’aiguise au contact des autres.","email":"arnaud@greatly.club","address":{"@type":"PostalAddress","streetAddress":"10 rue de Lambersart","postalCode":"59237","addressLocality":"Verlinghem","addressRegion":"Hauts-de-France","addressCountry":"FR"},"areaServed":"Métropole lilloise","founder":{"@type":"Person","name":"Arnaud Przybylski"}},{"@type":"WebSite","@id":"https://greatly.club/#site","url":"https://greatly.club/","name":"Greatly","inLanguage":"fr-FR","publisher":{"@id":"https://greatly.club/#organisation"}},{"@type":"WebPage","@id":"https://greatly.club/#page","url":"https://greatly.club/","name":"Greatly · Votre réussite s’aiguise au contact des autres.","inLanguage":"fr-FR","isPartOf":{"@id":"https://greatly.club/#site"},"about":{"@id":"https://greatly.club/#organisation"},"hasPart":[{"@type":"WebPageElement","name":"3 piliers pour agir avec justesse","url":"https://greatly.club/#piliers"},{"@type":"WebPageElement","name":"Pourquoi ?","url":"https://greatly.club/#pourquoi"}]}]}</script>
+
+<link rel="stylesheet" href="/_astro/_article_.kBNpL99H.css">
+<link rel="stylesheet" href="/_astro/index.7LXMNgVv.css">
+<link rel="stylesheet" href="/_astro/_article_.Cer0F98v.css">
+<link rel="stylesheet" href="/_astro/index.D3NB88cE.css"></head>
+<body class="teste-corps">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9G59C2C" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header class="entete-page">
+    <a class="logo" href="/" aria-label="Greatly, revenir à l’accueil">GREATLY <svg class="g-soleil" viewBox="0 0 24 24" aria-hidden="true"><g class="g-sr" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><line x1="12" y1="4" x2="12" y2="1.4"></line><line x1="17.66" y1="6.34" x2="19.5" y2="4.5"></line><line x1="20" y1="12" x2="22.6" y2="12"></line><line x1="17.66" y1="17.66" x2="19.5" y2="19.5"></line><line x1="12" y1="20" x2="12" y2="22.6"></line><line x1="6.34" y1="17.66" x2="4.5" y2="19.5"></line><line x1="4" y1="12" x2="1.4" y2="12"></line><line x1="6.34" y1="6.34" x2="4.5" y2="4.5"></line></g><circle cx="12" cy="12" r="5.4" fill="#B4F25C"></circle></svg></a>
+    <nav class="menu" aria-label="Menu"></nav><div class="teste-haut">
+  <div class="teste-haut-note">
+    <p class="teste-noter-l" id="noter-l">Votre note<span class="teste-pour"> pour <b data-noter-nom>Version retenue</b></span></p>
+    <div class="teste-etoiles" role="radiogroup" aria-labelledby="noter-l">
+      <button type="button" role="radio" class="teste-n" data-note="1" aria-checked="false" aria-label="1 sur 5">1</button><button type="button" role="radio" class="teste-n" data-note="2" aria-checked="false" aria-label="2 sur 5">2</button><button type="button" role="radio" class="teste-n" data-note="3" aria-checked="false" aria-label="3 sur 5">3</button><button type="button" role="radio" class="teste-n" data-note="4" aria-checked="false" aria-label="4 sur 5">4</button><button type="button" role="radio" class="teste-n" data-note="5" aria-checked="false" aria-label="5 sur 5">5</button>
+    </div>
+    <span class="teste-noter-etat" data-noter-etat aria-live="polite"></span>
+  </div>
+  <button type="button" class="teste-avis-version" data-ouvre-remarque><span>Donner mon avis</span><span class="teste-vote-k" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span></button>
+  <a class="teste-ouvrir" href="https://arnaudprz.github.io/greatly-site-v2/teste/retenue" target="_blank" rel="noopener" data-plein-ecran>Ouvrir en pleine page<span aria-hidden="true"> ↗</span></a>
+</div>
+  </header>
+
+
+<main id="contenu" class="teste">
+  <div class="teste-banc" id="comparer">
+    <aside class="teste-panneau" aria-label="Le test">
+      <h1><em>Aidez-nous à choisir</em> la DA de Greatly.</h1>
+      <p class="teste-appel">Parcourez toutes les versions et votez pour celle qui vous donne envie de lire jusqu’au bout.</p>
+      <button type="button" class="teste-pourquoi-l" data-ouvre-pourquoi>Pourquoi ce test ?</button>
+      <div class="teste-tuiles" role="tablist" aria-label="Les versions">
+        <p class="teste-rubrique" role="presentation">Retenue pour le moment, suite à vos retours</p><div class="teste-tuile teste-tuile-retenue" data-tuile="retenue">
+            <button type="button" role="tab" class="teste-onglet" id="onglet-retenue" aria-selected="true" tabindex="0" data-choisir="retenue" data-src="https://arnaudprz.github.io/greatly-site-v2/teste/retenue" data-nom="Version retenue">
+              <span class="teste-num"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span class="teste-nom">Version retenue</span>
+            </button>
+          </div>
+        <p class="teste-rubrique teste-rubrique-2" role="presentation">Inspirations</p><div class="teste-tuile" data-tuile="actuelle">
+            <button type="button" role="tab" class="teste-onglet" id="onglet-actuelle" aria-selected="false" tabindex="-1" data-choisir="actuelle" data-src="https://arnaudprz.github.io/greatly-site-v2/teste/pas-a-pas" data-nom="Pas à pas">
+              <span class="teste-num">1</span><span class="teste-nom">Pas à pas</span>
+            </button>
+          </div>
+        <div class="teste-tuile" data-tuile="rythme-1">
+            <button type="button" role="tab" class="teste-onglet" id="onglet-rythme-1" aria-selected="false" tabindex="-1" data-choisir="rythme-1" data-src="https://arnaudprz.github.io/greatly-site-v2/teste/rythme-1" data-nom="Magazine">
+              <span class="teste-num">2</span><span class="teste-nom">Magazine</span>
+            </button>
+          </div>
+        <div class="teste-tuile" data-tuile="rythme-2">
+            <button type="button" role="tab" class="teste-onglet" id="onglet-rythme-2" aria-selected="false" tabindex="-1" data-choisir="rythme-2" data-src="https://arnaudprz.github.io/greatly-site-v2/teste/rythme-2" data-nom="Le récit">
+              <span class="teste-num">3</span><span class="teste-nom">Le récit</span>
+            </button>
+          </div>
+        <div class="teste-tuile" data-tuile="rythme-3">
+            <button type="button" role="tab" class="teste-onglet" id="onglet-rythme-3" aria-selected="false" tabindex="-1" data-choisir="rythme-3" data-src="https://arnaudprz.github.io/greatly-site-v2/teste/rythme-3" data-nom="Les aplats">
+              <span class="teste-num">4</span><span class="teste-nom">Les aplats</span>
+            </button>
+          </div>
+        <div class="teste-tuile" data-tuile="rythme-4">
+            <button type="button" role="tab" class="teste-onglet" id="onglet-rythme-4" aria-selected="false" tabindex="-1" data-choisir="rythme-4" data-src="https://arnaudprz.github.io/greatly-site-v2/teste/rythme-4" data-nom="Manifeste">
+              <span class="teste-num">5</span><span class="teste-nom">Manifeste</span>
+            </button>
+          </div>
+        <div class="teste-tuile" data-tuile="rythme-5">
+            <button type="button" role="tab" class="teste-onglet" id="onglet-rythme-5" aria-selected="false" tabindex="-1" data-choisir="rythme-5" data-src="https://arnaudprz.github.io/greatly-site-v2/teste/rythme-5" data-nom="La visite">
+              <span class="teste-num">6</span><span class="teste-nom">La visite</span>
+            </button>
+          </div>
+        
+      </div>
+    </aside>
+    <figure class="teste-mac" aria-label="La version choisie, sur un écran d’ordinateur">
+      <div class="teste-mac-ecran">
+        <div class="teste-mac-barre" aria-hidden="true"><i></i><i></i><i></i><span class="teste-mac-url" data-url>greatly.club</span><span class="teste-mac-astuce">Faites défiler dans l’écran : animations comprises</span></div>
+        <div class="teste-mac-vue" data-vue><iframe title="La version choisie" data-cadre loading="eager"></iframe></div>
+      </div>
+      <div class="teste-mac-pied" aria-hidden="true"><span></span></div>
+    </figure>
+    <!-- téléphone à l'horizontale : l'écran d'ordinateur en plein écran, un écran à la fois (images : une version entière à 1 440 px fait planter un iPhone).
+         À gauche, les versions ; à droite, où on en est. Pas de note sur téléphone. -->
+    <section class="teste-tel" aria-label="Les versions, écran par écran, telles qu’elles s’affichent sur ordinateur">
+      <nav class="teste-tel-versions" aria-label="Les versions">
+        <button type="button" class="teste-tel-v" data-tel-choisir="retenue" data-ecrans="14" data-dossier="https://arnaudprz.github.io/greatly-site-v2/teste/apercus/retenue/" aria-pressed="true">
+            <span class="teste-tel-n"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>Version retenue</span>
+          </button><button type="button" class="teste-tel-v" data-tel-choisir="actuelle" data-ecrans="13" data-dossier="https://arnaudprz.github.io/greatly-site-v2/teste/apercus/actuelle/" aria-pressed="false">
+            <span class="teste-tel-n">1</span><span>Pas à pas</span>
+          </button><button type="button" class="teste-tel-v" data-tel-choisir="rythme-1" data-ecrans="14" data-dossier="https://arnaudprz.github.io/greatly-site-v2/teste/apercus/rythme-1/" aria-pressed="false">
+            <span class="teste-tel-n">2</span><span>Magazine</span>
+          </button><button type="button" class="teste-tel-v" data-tel-choisir="rythme-2" data-ecrans="29" data-dossier="https://arnaudprz.github.io/greatly-site-v2/teste/apercus/rythme-2/" aria-pressed="false">
+            <span class="teste-tel-n">3</span><span>Le récit</span>
+          </button><button type="button" class="teste-tel-v" data-tel-choisir="rythme-3" data-ecrans="13" data-dossier="https://arnaudprz.github.io/greatly-site-v2/teste/apercus/rythme-3/" aria-pressed="false">
+            <span class="teste-tel-n">4</span><span>Les aplats</span>
+          </button><button type="button" class="teste-tel-v" data-tel-choisir="rythme-4" data-ecrans="14" data-dossier="https://arnaudprz.github.io/greatly-site-v2/teste/apercus/rythme-4/" aria-pressed="false">
+            <span class="teste-tel-n">5</span><span>Manifeste</span>
+          </button><button type="button" class="teste-tel-v" data-tel-choisir="rythme-5" data-ecrans="15" data-dossier="https://arnaudprz.github.io/greatly-site-v2/teste/apercus/rythme-5/" aria-pressed="false">
+            <span class="teste-tel-n">6</span><span>La visite</span>
+          </button>
+      </nav>
+      <div class="teste-tel-ecrans" data-ecrans-liste tabindex="0" aria-label="Les écrans de la version : faites glisser vers le haut pour passer au suivant"></div>
+      <p class="teste-tel-compte" aria-live="polite"><b data-compte>1</b><span data-total></span></p>
+    </section>
+  </div>
+
+
+<!-- téléphone à la verticale : on demande de le tourner ; à l'horizontale, la version s'affiche directement -->
+<div class="teste-pivot" role="dialog" aria-modal="true" aria-labelledby="pivot-titre">
+  <p class="teste-pivot-logo" aria-hidden="true">GREATLY <i></i></p>
+  <svg class="teste-pivot-ic" viewBox="0 0 48 48" aria-hidden="true"><rect x="16" y="6" width="16" height="36" rx="3"></rect><path d="M22 37h4"></path></svg>
+  <h2 class="teste-pivot-t" id="pivot-titre"><span>Tournez</span> votre téléphone<b>.</b></h2>
+  <p class="teste-pivot-s">Vous comparez des versions du site Greatly faites pour un écran d’ordinateur. À l’horizontale, chaque écran s’affiche en entier&nbsp;: faites glisser pour passer au suivant.</p>
+</div>
+
+<dialog class="teste-avis teste-pop" aria-labelledby="pourquoi-titre">
+  <div class="teste-avis-merci">
+    <div class="teste-avis-tete">
+      <h2 id="pourquoi-titre"><em>Pourquoi</em>ce test ?</h2>
+      <button type="button" class="teste-avis-fermer" data-ferme-pourquoi aria-label="Fermer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+    </div>
+    <dl class="teste-expl">
+      <div><dt>Pourquoi</dt><dd>Une personne qui découvre Greatly lit d’abord la page d’accueil. Si elle décroche avant le point de bascule, elle ne vient pas prendre un café.</dd></div>
+      <div><dt>Ce qui change</dt><dd>Chaque proposition reprend toute la page d’accueil dans la DA de Greatly, de la citation de Montaigne jusqu’au point de bascule. Les mots restent les mêmes ; seule la mise en page change.</dd></div>
+      <div><dt>Comment noter</dt><dd>Choisissez une version à gauche et faites-la défiler jusqu’au bout dans l’écran. Donnez-lui ensuite une note de 1 à 5 en haut de la page, et votre avis si vous le souhaitez.</dd></div>
+    </dl>
+  </div>
+</dialog>
+
+<dialog class="teste-avis teste-pop teste-remarque" aria-labelledby="remarque-titre">
+  <form class="teste-avis-f" method="dialog" novalidate data-remarque-form>
+    <div class="teste-avis-tete">
+      <h2 id="remarque-titre"><em>Votre avis sur</em><span data-remarque-nom>Version retenue</span></h2>
+      <button type="button" class="teste-avis-fermer" data-ferme-remarque aria-label="Fermer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+    </div>
+    <label class="teste-sous" for="remarque-texte">Ce qui marche, ce qui gêne, ce que vous changeriez dans cette version.</label>
+    <textarea id="remarque-texte" name="texte" rows="5" maxlength="1500" required></textarea>
+    <p class="teste-avis-chapo">Sans nom ni e-mail. Votre avis n’est lu que par l’équipe de Greatly.</p>
+    <p class="teste-avis-erreur" role="alert" hidden></p>
+    <div class="teste-avis-nav"><button type="submit" class="teste-vote"><span>Envoyer mon avis</span><span class="teste-vote-k" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span></button></div>
+  </form>
+  <div class="teste-avis-merci" hidden data-remarque-merci>
+    <h2><em>Merci,</em>votre avis est enregistré.</h2>
+    <div class="teste-merci-actions">
+      <button type="button" class="teste-vote" data-ferme-remarque><span>Revenir aux versions</span><span class="teste-vote-k" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span></button>
+    </div>
+  </div>
+</dialog>
+</main>
+
+<script type="module">(function(){var t=document.querySelector(".entete-page");if(!t)return;var r=[].slice.call(document.querySelectorAll("[data-entete]"));if(r.length){var i=function(){var n=t.offsetHeight/2,a=r[0];r.forEach(function(s){s.getBoundingClientRect().top<=n&&(a=s)});var l=a.getAttribute("data-entete").split(",");t.style.setProperty("--h-fond",l[0]),t.style.setProperty("--h-encre",l[1])};addEventListener("scroll",i,{passive:!0}),addEventListener("resize",i),i();return}var e=document.querySelector("[data-tete], main [data-scene]");e||(e=t.nextElementSibling,e&&e.tagName==="MAIN"&&(e=e.firstElementChild));var c=e&&[e,e.firstElementChild].some(function(n){return n&&/^rgb\(255, 107, 97\)/.test(getComputedStyle(n).backgroundColor)});function o(){t.classList.toggle("sur-creme",!(c&&e.getBoundingClientRect().bottom>t.offsetHeight/2))}addEventListener("scroll",o,{passive:!0}),addEventListener("resize",o),o()})();</script>
+
+<script type="module" src="/_astro/Base.astro_astro_type_script_index_0_lang.DhnTRFR4.js"></script>
+</body>
+</html>
+<script type="module" src="/_astro/index.astro_astro_type_script_index_0_lang.BhAp4-xS.js"></script>
